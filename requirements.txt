@@ -1,0 +1,14 @@
+# LangChain core
+langchain
+langchain-core
+langchain-community
+
+# Gemini (Google Generative AI)
+google-generativeai
+langchain-google-genai
+
+# Pydantic v2 (bắt buộc)
+# pydantic>=2.7,<3.0
+
+# Quản lý API keys
+python-dotenv
