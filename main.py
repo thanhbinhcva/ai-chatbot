@@ -1,5 +1,6 @@
 import os
 import json
+import uuid
 from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
@@ -20,64 +21,49 @@ llm = ChatGoogleGenerativeAI(
 # 3. Bộ nhớ hội thoại
 memory = ConversationBufferMemory(memory_key="history", input_key="user_input")
 
-# 4. Định nghĩa các giai đoạn
-stages = {
-    "intro": """
+# 4. Prompt tổng hợp (gom hết các stages)
+main_prompt = ChatPromptTemplate.from_template("""
 Bạn là một trợ lý AI thân thiện, chuyên giúp các chủ xưởng nhôm kính nhỏ ở Việt Nam xây dựng thương hiệu.
-Hãy chào khách hàng ngắn gọn, giải thích lợi ích và mời họ bắt đầu.
-""",
 
-    "basic_info": """
-{history}
-Hãy hỏi tiếp một câu để lấy thông tin cơ bản (tên công ty, dịch vụ chính, khách hàng mục tiêu).
-""",
+Nhiệm vụ:
+- Trò chuyện tự nhiên, hỏi từng câu một, dựa theo câu trả lời trước để hỏi tiếp.
+- Hãy lần lượt thu thập đủ các thông tin sau:
+  1. Tên thương hiệu/công ty
+  2. Địa chỉ
+  3. Số điện thoại (nếu có)
+  4. Dịch vụ chính
+  5. Cơ cấu sản phẩm
+  6. Khách hàng mục tiêu
+  7. Lợi thế cạnh tranh
+  8. Giá trị cốt lõi
+  9. Mong muốn phát triển trong 3 năm tới
+ 10. Phong cách logo
+ 11. Màu sắc chủ đạo
+ 12. Doanh thu trung bình theo tháng/năm
+ 13. Khẩu hiệu / slogan
 
-    "competitive_advantage": """
-{history}
-Hãy hỏi tiếp một câu về lợi thế cạnh tranh của công ty.
-""",
-
-    "core_values": """
-{history}
-Hãy hỏi tiếp về giá trị cốt lõi hoặc tầm nhìn 3 năm tới.
-""",
-
-    "style_preferences": """
-{history}
-Hãy hỏi một câu về phong cách logo hoặc màu sắc chủ đạo (tùy thông tin nào chưa có).
-""",
-
-    "summary": """
-{history}
-Hãy viết một đoạn tóm tắt thương hiệu dựa trên thông tin đã có:
-- Tên thương hiệu
-- Dịch vụ chính
-- Khách hàng mục tiêu
-- Lợi thế cạnh tranh
-- Giá trị cốt lõi
-- Tầm nhìn
-- Phong cách logo
-- Màu sắc
-
+Khi đã đủ thông tin → viết một đoạn tóm tắt thương hiệu rõ ràng và ngắn gọn.
 Kết thúc bằng câu hỏi xác nhận:
 "Anh/chị thấy phần tóm tắt này đã đúng và đủ chưa, hay cần chỉnh sửa thêm không ạ?"
-"""
-}
 
-# 5. Tạo chain
-chains = {
-    name: LLMChain(llm=llm, prompt=ChatPromptTemplate.from_template(template), memory=memory, verbose=False)
-    for name, template in stages.items()
-}
+{history}
+Người dùng: {user_input}
+Bot:
+""")
 
-# 6. Hàm trích xuất thông tin thành JSON
+# 5. Chain duy nhất
+main_chain = LLMChain(llm=llm, prompt=main_prompt, memory=memory, verbose=False)
+
+# 6. Hàm trích xuất JSON
 def extract_info(conversation: str):
+    session_id = str(uuid.uuid4())[:8]
     extract_prompt = ChatPromptTemplate.from_template("""
-Bạn là một hệ thống trích xuất dữ liệu. 
-Hãy phân tích toàn bộ đoạn hội thoại sau và xuất ra JSON đúng cấu trúc:
+Bạn là hệ thống trích xuất dữ liệu. 
+Hãy phân tích đoạn hội thoại sau và xuất ra JSON theo đúng cấu trúc dưới đây.
+Chỉ trả về JSON hợp lệ, không thêm text ngoài JSON.
 
 {{
-  "session_id": "tạo id ngẫu nhiên",
+  "session_id": "{session_id}",
   "dealer_id": "số điện thoại nếu có, nếu không thì để trống",
   "brand_name_full": "",
   "location": "",
@@ -93,15 +79,18 @@ Hãy phân tích toàn bộ đoạn hội thoại sau và xuất ra JSON đúng 
   "revenue": ""
 }}
 
-Chỉ trả về JSON hợp lệ, không giải thích gì thêm.
-
 Đoạn hội thoại:
 {conversation}
 """)
-
     extract_chain = LLMChain(llm=llm, prompt=extract_prompt, verbose=False)
-    response = extract_chain.invoke({"conversation": conversation})
-    return json.loads(response["text"])
+    response = extract_chain.invoke({"conversation": conversation, "session_id": session_id})
+    raw_text = response.get("text", "").strip()
+
+    try:
+        return json.loads(raw_text)
+    except json.JSONDecodeError:
+        print("⚠️ Không parse được JSON, lưu raw text thay thế.")
+        return {"session_id": session_id, "raw_output": raw_text}
 
 # 7. Hàm lưu JSON
 def save_brand_profile(data, filename="brand_profile.json"):
@@ -112,27 +101,30 @@ def save_brand_profile(data, filename="brand_profile.json"):
 # 8. Chạy hội thoại
 def run_chatbot():
     print("🤖 Chatbot Gemini - Tư vấn thương hiệu\n")
-    for stage_name, chain in chains.items():
-        print(f"--- {stage_name.upper()} ---")
-        user_input = input("Bạn: ") if stage_name != "intro" else "Xin chào"
-        response = chain.invoke({"user_input": user_input})
+
+    # Khởi động hội thoại
+    user_input = "Xin chào"
+    response = main_chain.invoke({"user_input": user_input})
+    print("Bot:", response["text"])
+
+    # Vòng lặp hội thoại
+    while True:
+        user_input = input("Bạn: ")
+        response = main_chain.invoke({"user_input": user_input})
         print("Bot:", response["text"])
 
-    # 9. Xử lý xác nhận sau summary
+        # Nếu bot đã tóm tắt và hỏi xác nhận
+        if "đúng và đủ" in response["text"].lower() or "chỉnh sửa" in response["text"].lower():
+            break
+
+    # Xử lý xác nhận
     while True:
         user_input = input("Bạn: ")
         if any(word in user_input.lower() for word in ["đúng", "đủ", "chính xác", "ok", "oke", "rồi"]):
             print("Bot: Tuyệt vời! Rất vui vì đã giúp anh/chị định hình thương hiệu. 🚀")
-
-            # Lấy toàn bộ lịch sử hội thoại
             final_summary = memory.load_memory_variables({})["history"]
-
-            # Trích xuất JSON
             brand_profile = extract_info(final_summary)
-
-            # Lưu kết quả
             save_brand_profile(brand_profile)
-
             break
         else:
             fix_prompt = ChatPromptTemplate.from_template("""
