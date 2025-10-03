@@ -32,3 +32,7 @@ Chatbot sẽ thu thập thông tin từ khách hàng thông qua hội thoại t�
 ```bash
 git clone https://github.com/your-username/ai-chatbot-branding.git
 cd ai-chatbot-branding
+
+### 2. Tạo môi trường ảo (tuỳ chọn)
+conda create -n langchain-chat python=3.10 -y
+conda activate langchain-chat
