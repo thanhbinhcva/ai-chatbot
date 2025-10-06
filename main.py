@@ -1,6 +1,7 @@
 import os
 import json
 import uuid
+import re
 from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
@@ -38,9 +39,10 @@ Nhiệm vụ:
   8. Giá trị cốt lõi
   9. Mong muốn phát triển trong 3 năm tới
  10. Phong cách logo
- 11. Màu sắc chủ đạo
- 12. Doanh thu trung bình theo tháng/năm
- 13. Khẩu hiệu / slogan
+ 11. Biểu tượng/logo mong muốn (ví dụ: cửa, cửa sổ, toà nhà, mái nhà, khiên, bánh răng, hình học trừu tượng...)                                             
+ 12. Màu sắc chủ đạo
+ 13. Doanh thu trung bình theo tháng/năm
+ 14. Khẩu hiệu / slogan
 
 Khi đã đủ thông tin → viết một đoạn tóm tắt thương hiệu rõ ràng và ngắn gọn.
 Kết thúc bằng câu hỏi xác nhận:
@@ -51,7 +53,7 @@ Người dùng: {user_input}
 Bot:
 """)
 
-# 5. Chain duy nhất
+# 5. Chain 
 main_chain = LLMChain(llm=llm, prompt=main_prompt, memory=memory, verbose=False)
 
 # 6. Hàm trích xuất JSON
@@ -76,7 +78,8 @@ Chỉ trả về JSON hợp lệ, không thêm text ngoài JSON.
   "future_vision": [],
   "logo_style": [],
   "main_color": [],
-  "revenue": ""
+  "revenue": "", 
+  "logo_shape": [],                                          
 }}
 
 Đoạn hội thoại:
@@ -92,7 +95,68 @@ Chỉ trả về JSON hợp lệ, không thêm text ngoài JSON.
         print("⚠️ Không parse được JSON, lưu raw text thay thế.")
         return {"session_id": session_id, "raw_output": raw_text}
 
-# 7. Hàm lưu JSON
+# 7. Danh sách thư mục logo
+logo_folders = {
+    "abstract geometric": "logos/abstract_geometric/",
+    "building/tower": "logos/building_tower/",
+    "door": "logos/door/",
+    "gear/mechanism": "logos/gear/",
+    "house": "logos/house/",
+    "lock": "logos/lock/",
+    "rolling door/shutter": "logos/rolling_door/",
+    "roof": "logos/roof/",
+    "shield": "logos/shield/",
+    "window": "logos/window/"
+}
+
+# 8. Gợi ý label logo
+def recommend_logo(conversation: str):
+    prompt = ChatPromptTemplate.from_template("""
+Bạn là một chuyên gia thương hiệu.
+Dựa trên toàn bộ đoạn hội thoại sau, hãy chọn duy nhất 1 nhóm logo phù hợp nhất.
+
+Danh sách nhóm logo có sẵn:
+- Abstract geometric
+- Building/Tower
+- Door
+- Gear/mechanism
+- House
+- Lock/security
+- Rolling door/shutter
+- Roof
+- Shield
+- Window
+
+⚠️ Chỉ trả về JSON hợp lệ theo đúng cấu trúc:
+{{
+  "recommended_category": "tên nhóm logo",
+  "reason": "giải thích ngắn gọn"
+}}
+
+Đoạn hội thoại:
+{conversation}
+""")
+
+    chain = LLMChain(llm=llm, prompt=prompt, verbose=False)
+    response = chain.invoke({"conversation": conversation})
+
+    text = response.get("text", "").strip()
+
+    # Bóc JSON bằng regex
+
+    match = re.search(r"\{.*\}", text, re.DOTALL)
+    if not match:
+        raise ValueError("❌ recommend_logo: Model không trả về JSON.\nKết quả:", text)
+
+    result = json.loads(match.group())
+
+    # Thêm folder path
+    folder_path = logo_folders.get(result["recommended_category"], "logos/abstract_geometric/")
+    result["folder_path"] = folder_path
+    return result
+
+    
+# 7. Lưu JSON
 def save_brand_profile(data, filename="brand_profile.json"):
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
@@ -125,6 +189,13 @@ def run_chatbot():
             final_summary = memory.load_memory_variables({})["history"]
             brand_profile = extract_info(final_summary)
             save_brand_profile(brand_profile)
+            # Gợi ý label logo
+            logo_suggestion = recommend_logo(final_summary)
+            print("\n🎨 Logo đề xuất cho thương hiệu của anh/chị:")
+            print("👉 Nhóm logo:", logo_suggestion["recommended_category"])
+            print("📌 Lý do:", logo_suggestion["reason"])
+            print("📂 Folder:", logo_suggestion["folder_path"])
+            
             break
         else:
             fix_prompt = ChatPromptTemplate.from_template("""
