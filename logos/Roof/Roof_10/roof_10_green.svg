@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 224 224">
+  <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#linear-gradient2);
+      }
+
+      .st1 {
+        fill: url(#linear-gradient1);
+      }
+
+      .st2 {
+        fill: url(#linear-gradient3);
+      }
+
+      .st3 {
+        fill: url(#linear-gradient4);
+      }
+
+      .st4 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="19.57" y1="112" x2="204.43" y2="112" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#adcc54"/>
+      <stop offset=".19" stop-color="#a9c953"/>
+      <stop offset=".36" stop-color="#9ebf50"/>
+      <stop offset=".53" stop-color="#8cb04c"/>
+      <stop offset=".69" stop-color="#739b46"/>
+      <stop offset=".84" stop-color="#527f3e"/>
+      <stop offset=".99" stop-color="#2a5d34"/>
+      <stop offset="1" stop-color="#275b34"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient1" x1="113.29" y1="149.43" x2="125.05" y2="149.43" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient2" x1="113.29" y1="135.3" x2="125.05" y2="135.3" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient3" x1="98.95" y1="149.43" x2="110.35" y2="149.43" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient4" x1="98.95" y1="135.3" x2="110.75" y2="135.3" xlink:href="#linear-gradient"/>
+  </defs>
+  <path class="st4" d="M64.41,105.38l47.54-45.49,92.48,89.9h-38.22c-.18.73.3.71.62,1.03,3.6,3.68,9.33,7.27,13.35,10.89.51.46.96,1,1.46,1.48l-.54.18c-23.61-15.59-46.14-32.69-69.16-49.12l-70.51,49.86-.54-.18,15.98-13.04.56-1.09H19.57l33.44-32.85v-24.41h-3.31v-5.14h18.01v5.14h-3.31v12.85ZM154.45,141.35l-42.82-41.04-41.71,40.13,41.71-31.26,42.81,32.18Z"/>
+  <polygon class="st1" points="125.05 143.56 125.05 154.75 124.5 155.3 113.84 155.3 113.29 154.75 113.29 143.56 125.05 143.56"/>
+  <rect class="st0" x="113.29" y="129.61" width="11.76" height="11.38"/>
+  <rect class="st2" x="98.95" y="143.56" width="11.39" height="11.75"/>
+  <path class="st3" d="M110.71,129.61c.18.13-.37.47-.37.55v10.28c0,.11.47.28.37.55h-11.76v-11.38h11.76Z"/>
+</svg>

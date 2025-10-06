@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 224 224">
+  <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#linear-gradient2);
+      }
+
+      .st1 {
+        fill: url(#linear-gradient1);
+      }
+
+      .st2 {
+        fill: url(#linear-gradient3);
+      }
+
+      .st3 {
+        fill: url(#linear-gradient6);
+      }
+
+      .st4 {
+        fill: url(#linear-gradient7);
+      }
+
+      .st5 {
+        fill: url(#linear-gradient5);
+      }
+
+      .st6 {
+        fill: url(#linear-gradient4);
+      }
+
+      .st7 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="136.99" y1="89.66" x2="197.32" y2="89.66" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8d3189"/>
+      <stop offset=".24" stop-color="#893087"/>
+      <stop offset=".45" stop-color="#7e2e80"/>
+      <stop offset=".65" stop-color="#6c2a76"/>
+      <stop offset=".85" stop-color="#532568"/>
+      <stop offset="1" stop-color="#3a215a"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient1" x1="114.99" y1="167.27" x2="153.9" y2="167.27" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient2" x1="114.99" y1="56.62" x2="153.38" y2="56.62" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient3" x1="26.68" y1="89.69" x2="85.96" y2="89.69" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient4" x1="137.11" y1="134.99" x2="196.32" y2="134.99" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient5" x1="69.62" y1="166.78" x2="107.51" y2="166.78" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient6" x1="27.18" y1="135.07" x2="86.43" y2="135.07" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient7" x1="70.56" y1="57.01" x2="107.51" y2="57.01" xlink:href="#linear-gradient"/>
+  </defs>
+  <polygon class="st7" points="154.16 109.13 136.99 92 158.63 70.19 196.66 107.3 197.32 109.13 154.16 109.13"/>
+  <path class="st1" d="M114.99,153.28c2.22-1.7,15.5-16.38,16.65-16.18l22.26,22.16-38.91,38.16v-44.15Z"/>
+  <polygon class="st0" points="114.99 27.07 115.99 26.57 153.38 64.55 131.2 86.67 114.99 69.97 114.99 27.07"/>
+  <path class="st2" d="M85.96,93.08l-16.36,15.82c-14.32.83-28.58-.72-42.92-.27l37.67-38.4,21.23,20.67.38,2.19Z"/>
+  <path class="st6" d="M196.32,116.12l-37.18,37.74-22.03-22.02c0-1.42,13.37-14.01,15.55-15.71h43.66Z"/>
+  <polygon class="st5" points="107.51 196.44 69.62 159.2 91.39 137.12 92.81 137.54 107.51 152.29 107.51 196.44"/>
+  <path class="st3" d="M27.18,116.12h44.16c1.72,2.18,15.21,14.35,15.1,15.72l-22.08,22.18-37.17-37.9Z"/>
+  <path class="st4" d="M107.51,27.82v43.15c-4.81,5.49-10.17,10.5-15.72,15.23l-21.23-21.24,36.95-37.14Z"/>
+</svg>

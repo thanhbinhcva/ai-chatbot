@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 224 224">
+  <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#linear-gradient2);
+      }
+
+      .st1 {
+        fill: url(#linear-gradient1);
+      }
+
+      .st2 {
+        fill: url(#linear-gradient3);
+      }
+
+      .st3 {
+        fill: url(#linear-gradient4);
+      }
+
+      .st4 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="58.53" y1="39.44" x2="164.49" y2="39.44" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#adcc54"/>
+      <stop offset=".19" stop-color="#a9c953"/>
+      <stop offset=".36" stop-color="#9ebf50"/>
+      <stop offset=".53" stop-color="#8cb04c"/>
+      <stop offset=".69" stop-color="#739b46"/>
+      <stop offset=".84" stop-color="#527f3e"/>
+      <stop offset=".99" stop-color="#2a5d34"/>
+      <stop offset="1" stop-color="#275b34"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient1" x1="115.32" y1="157.66" x2="185.01" y2="157.66" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient2" x1="38.99" y1="157.68" x2="108.26" y2="157.68" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient3" x1="42.68" y1="84.59" x2="180.91" y2="84.59" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient4" x1="96.21" y1="138.26" x2="127.57" y2="138.26" xlink:href="#linear-gradient"/>
+  </defs>
+  <path class="st4" d="M59.07,72.5c-.62-6.56-.84-13.22.03-19.77,5.49-41.12,52.92-60.63,85.6-34.47,15.94,12.76,20.99,30.34,19.55,50.33-.04.6-.29,3.38-.63,3.4l-21.31-11.48c-.86-2.77-.77-5.69-1.49-8.6-6-24.25-38.95-31.13-53.62-10.42-4.35,6.14-4.51,12.3-6.46,19.27l-21.68,11.74Z"/>
+  <path class="st1" d="M115.32,217.59v-29.15c11.19-5.83,23.44-11.52,32.55-20.43,2.34-2.28,6.12-6.18,7.76-8.89,6.85-11.28,2.28-32.93,3.57-45.89.04-.42-.03-.84.38-1.13l24.86-14.37c-.15.91.21,1.76.27,2.64.65,11.22.11,24.3-.27,35.58-.23,6.76-.35,11.98-2.08,18.61-7.52,28.84-31.98,44.04-56.27,57.78-3.43,1.94-7,4.07-10.76,5.26Z"/>
+  <path class="st0" d="M108.26,217.59c-.49.54-11.74-5.91-12.94-6.61-30.43-17.58-54.94-34.84-56.19-73.5-.43-13.22.34-26.53.01-39.76l25.22,14.51c.26.19.24.46.27.74.38,3.09.04,8.09,0,11.38-.15,11.65-2.34,28.08,5.55,37.58,9.58,11.55,23.54,19.5,36.98,25.84.35.17.7.32,1.1.28v29.52Z"/>
+  <path class="st2" d="M180.91,91.42l-25.14,14.83c-5.45-3.07-10.62-6.69-16.06-9.83-16.74-9.65-28.81-13.39-47.26-4.54-8.5,4.07-16.69,9.44-24.67,14.42l-25.1-14.75c8.97-5.47,18.06-10.85,27.32-15.81,16.11-8.64,29.25-14.2,48.22-12.57,23.01,1.98,42.17,17.67,62.27,27.54l.42.71Z"/>
+  <path class="st3" d="M111.24,108.4c13.02-.37,21.17,14.68,13.17,25.04-1.15,1.49-2.97,2.57-4.03,4.04l-.18,24.3c-2.94,9.14-15.74,8.17-17.24-1.33l-.12-23.6c-12.16-8.45-6.53-28.03,8.4-28.44Z"/>
+</svg>

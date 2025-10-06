@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 224 224">
+  <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#linear-gradient2);
+      }
+
+      .st1 {
+        fill: url(#linear-gradient1);
+      }
+
+      .st2 {
+        fill: url(#linear-gradient3);
+      }
+
+      .st3 {
+        fill: url(#linear-gradient4);
+      }
+
+      .st4 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="87.3" y1="137.55" x2="105.86" y2="137.55" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#29ade3"/>
+      <stop offset=".2" stop-color="#29a9df"/>
+      <stop offset=".37" stop-color="#299ed6"/>
+      <stop offset=".54" stop-color="#298cc6"/>
+      <stop offset=".7" stop-color="#2a73b0"/>
+      <stop offset=".86" stop-color="#2b5293"/>
+      <stop offset="1" stop-color="#2c2f75"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient1" x1="118.14" x2="136.7" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient2" y1="166.76" y2="166.76" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient3" x1="118.14" y1="166.76" x2="136.7" y2="166.76" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient4" x1="37.96" y1="112" x2="186.04" y2="112" xlink:href="#linear-gradient"/>
+  </defs>
+  <g>
+    <rect class="st4" x="87.3" y="128.27" width="18.56" height="18.56"/>
+    <rect class="st1" x="118.14" y="128.27" width="18.57" height="18.56"/>
+    <rect class="st0" x="87.3" y="157.48" width="18.56" height="18.56"/>
+    <rect class="st2" x="118.14" y="157.48" width="18.57" height="18.56"/>
+  </g>
+  <path class="st3" d="M64.42,176.48c-1.33,0-2.65-.51-3.64-1.47-14.71-14.1-22.81-33.09-22.81-53.46,0-40.83,33.21-74.04,74.04-74.04s74.04,33.21,74.04,74.04c0,19.62-7.6,38.11-21.4,52.07-1.5,1.52-3.77,1.98-5.75,1.17-1.97-.81-3.26-2.74-3.26-4.87v-37.45l-42.98-31.39-42.98,31.39v38.74c0,2.11-1.26,4.02-3.2,4.84-.66.28-1.37.42-2.06.42ZM112,58.05c-35.02,0-63.51,28.49-63.51,63.51,0,12.79,3.72,24.94,10.66,35.28v-27.03c0-1.68.8-3.26,2.16-4.25l48.24-35.23c1.85-1.35,4.36-1.35,6.21,0l48.24,35.23c1.36.99,2.16,2.57,2.16,4.25v24.96c6.09-9.9,9.35-21.31,9.35-33.21,0-35.02-28.49-63.51-63.51-63.51Z"/>
+</svg>

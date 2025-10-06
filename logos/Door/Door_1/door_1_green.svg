@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 224 224">
+  <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#linear-gradient1);
+      }
+
+      .st1 {
+        fill: url(#linear-gradient3);
+      }
+
+      .st2 {
+        fill: url(#linear-gradient7);
+      }
+
+      .st3 {
+        fill: url(#linear-gradient5);
+      }
+
+      .st4 {
+        fill: url(#linear-gradient);
+      }
+
+      .st4, .st5, .st6, .st7, .st8 {
+        fill-rule: evenodd;
+      }
+
+      .st5 {
+        fill: url(#linear-gradient2);
+      }
+
+      .st6 {
+        fill: url(#linear-gradient8);
+      }
+
+      .st7 {
+        fill: url(#linear-gradient4);
+      }
+
+      .st8 {
+        fill: url(#linear-gradient6);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="87.39" y1="72.61" x2="104.74" y2="72.61" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#adcc54"/>
+      <stop offset=".19" stop-color="#a9c953"/>
+      <stop offset=".36" stop-color="#9ebf50"/>
+      <stop offset=".53" stop-color="#8cb04c"/>
+      <stop offset=".69" stop-color="#739b46"/>
+      <stop offset=".84" stop-color="#527f3e"/>
+      <stop offset=".99" stop-color="#2a5d34"/>
+      <stop offset="1" stop-color="#275b34"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient1" y1="102.13" y2="102.13" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient2" x1="113.85" x2="131.2" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient3" x1="113.85" y1="102.13" x2="131.2" y2="102.13" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient4" x1="49.4" y1="112" x2="174.6" y2="112" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient5" y1="102.13" y2="102.13" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient6" x1="113.85" x2="131.2" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient7" x1="113.85" y1="102.13" x2="131.2" y2="102.13" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient8" y1="87.54" x2="131.2" y2="87.54" xlink:href="#linear-gradient"/>
+  </defs>
+  <path class="st4" d="M104.74,61.9v21.42h-17.35c0-10.49,7.47-19.31,17.35-21.42Z"/>
+  <rect class="st0" x="87.39" y="91.08" width="17.35" height="22.1"/>
+  <path class="st5" d="M131.2,83.32h-17.35v-21.42c9.88,2.11,17.35,10.93,17.35,21.42Z"/>
+  <rect class="st1" x="113.85" y="91.08" width="17.35" height="22.1"/>
+  <path class="st7" d="M112,21h-62.6v182h62.6c34.43,0,62.6-28.17,62.6-62.6v-56.8c0-34.43-28.17-62.6-62.6-62.6ZM70.47,81.34c0-21.36,17.47-38.83,38.83-38.83s38.83,17.47,38.83,38.83v78.74h-77.66v-78.74ZM70.47,163.4h77.66v6.2h-77.66v-6.2ZM153.71,179.48h-88.82v-6.2h88.82v6.2Z"/>
+  <path class="st4" d="M104.74,61.9v21.42h-17.35c0-10.49,7.47-19.31,17.35-21.42Z"/>
+  <rect class="st3" x="87.39" y="91.08" width="17.35" height="22.1"/>
+  <path class="st8" d="M131.2,83.32h-17.35v-21.42c9.88,2.11,17.35,10.93,17.35,21.42Z"/>
+  <rect class="st2" x="113.85" y="91.08" width="17.35" height="22.1"/>
+  <path class="st6" d="M87.39,83.32h17.35v-21.42c-9.88,2.11-17.35,10.93-17.35,21.42ZM87.39,91.08v22.1h17.35v-22.1h-17.35ZM113.85,61.9v21.42h17.35c0-10.49-7.47-19.31-17.35-21.42ZM113.85,91.08v22.1h17.35v-22.1h-17.35Z"/>
+</svg>

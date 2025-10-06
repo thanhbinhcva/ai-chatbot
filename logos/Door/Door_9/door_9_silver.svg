@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 224 224">
+  <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#linear-gradient2);
+      }
+
+      .st1 {
+        fill: url(#linear-gradient1);
+      }
+
+      .st2 {
+        fill: url(#linear-gradient3);
+      }
+
+      .st3 {
+        fill: url(#linear-gradient6);
+      }
+
+      .st4 {
+        fill: url(#linear-gradient8);
+      }
+
+      .st5 {
+        fill: url(#linear-gradient7);
+      }
+
+      .st6 {
+        fill: url(#linear-gradient5);
+      }
+
+      .st7 {
+        fill: url(#linear-gradient4);
+      }
+
+      .st8 {
+        fill: url(#linear-gradient);
+      }
+
+      .st9 {
+        fill: #c9c9c9;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="73.78" y1="104.66" x2="183.69" y2="104.66" gradientTransform="translate(223.47 -31.55) rotate(85.71)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c7c6c5"/>
+      <stop offset=".23" stop-color="#7d7d7d"/>
+      <stop offset=".41" stop-color="#b0b0b0"/>
+      <stop offset=".59" stop-color="#777"/>
+      <stop offset=".77" stop-color="#4a4a4a"/>
+      <stop offset="1" stop-color="#bababa"/>
+      <stop offset="1" stop-color="#c3c3c3"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient1" x1="40.31" y1="117.5" x2="155.59" y2="117.5" gradientTransform="translate(14.44 -10.66) rotate(6.73)" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient2" x1="40.31" y1="79.7" x2="77.64" y2="79.7" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient3" x1="46.54" y1="118.37" x2="124.89" y2="118.37" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient4" x1="68.53" y1="116.7" x2="140.38" y2="116.7" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient5" x1="85.84" y1="119.12" x2="147.07" y2="119.12" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient6" x1="122.85" y1="145.33" x2="155.59" y2="145.33" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient7" x1="111.86" y1="70.31" x2="137.93" y2="70.31" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient8" x1="60.08" y1="167.07" x2="80.47" y2="167.07" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#linear-gradient"/>
+  </defs>
+  <circle class="st9" cx="112" cy="112" r="85.65" transform="translate(-46.39 112) rotate(-45)"/>
+  <g>
+    <rect class="st8" x="60.39" y="54.68" width="136.69" height="99.96" transform="translate(14.74 225.21) rotate(-85.71)"/>
+    <rect class="st1" x="47.97" y="49.16" width="99.96" height="136.69" transform="translate(-13.09 12.28) rotate(-6.73)"/>
+    <g>
+      <path class="st0" d="M77.64,51.08l-37.32,4.4,6.23,52.84c6.44-21.12,17.1-40.57,31.09-57.24Z"/>
+      <path class="st2" d="M69.91,189.63c-.08-.62-.17-1.23-.24-1.86-6.57-55.69,15.8-108.13,55.23-142.27l-47.26,5.57c-14,16.68-24.65,36.13-31.09,57.24l9.78,82.91,13.59-1.6Z"/>
+      <path class="st7" d="M140.38,50.57l-.8-6.79-14.69,1.73c-39.43,34.14-61.79,86.57-55.23,142.27.07.62.16,1.24.24,1.86l16.68-1.97c-5.14-53.5,16.33-103.67,53.79-137.09Z"/>
+      <path class="st6" d="M147.07,107.27l-6.69-56.7c-37.46,33.42-58.92,83.59-53.79,137.09l36.26-4.28c1.62-27.56,10.22-53.59,24.22-76.11Z"/>
+      <path class="st3" d="M147.07,107.27c-14,22.52-22.6,48.55-24.22,76.11l32.74-3.86-8.52-72.25Z"/>
+    </g>
+  </g>
+  <path class="st5" d="M124.89,57.28c-1.62,6.38-6.65,11.42-13.04,13.04,6.38,1.62,11.42,6.65,13.04,13.04,1.62-6.38,6.65-11.42,13.04-13.04-6.38-1.62-11.42-6.65-13.04-13.04Z"/>
+  <path class="st4" d="M70.28,156.87c-1.27,4.99-5.2,8.93-10.2,10.2,4.99,1.26,8.93,5.2,10.2,10.2,1.26-4.99,5.2-8.93,10.2-10.2-4.99-1.26-8.93-5.2-10.2-10.2Z"/>
+</svg>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 224 224">
+  <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#linear-gradient2);
+      }
+
+      .st1 {
+        fill: url(#linear-gradient1);
+      }
+
+      .st2 {
+        fill: url(#linear-gradient9);
+      }
+
+      .st3 {
+        fill: url(#linear-gradient3);
+      }
+
+      .st4 {
+        fill: url(#linear-gradient6);
+      }
+
+      .st5 {
+        fill: url(#linear-gradient8);
+      }
+
+      .st6 {
+        fill: url(#linear-gradient7);
+      }
+
+      .st7 {
+        fill: url(#linear-gradient5);
+      }
+
+      .st8 {
+        fill: url(#linear-gradient4);
+      }
+
+      .st9 {
+        fill: url(#linear-gradient11);
+      }
+
+      .st10 {
+        fill: url(#linear-gradient10);
+      }
+
+      .st11 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="109.15" y1="92.7" x2="109.15" y2="126.58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#29ade3"/>
+      <stop offset=".2" stop-color="#29a9df"/>
+      <stop offset=".37" stop-color="#299ed6"/>
+      <stop offset=".54" stop-color="#298cc6"/>
+      <stop offset=".7" stop-color="#2a73b0"/>
+      <stop offset=".86" stop-color="#2b5293"/>
+      <stop offset="1" stop-color="#2c2f75"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient1" x1="92.51" y1="92.62" x2="92.51" y2="126.63" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient2" x1="92.51" y1="89.57" x2="92.51" y2="125.07" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient3" x1="109.15" y1="89.57" x2="109.15" y2="125.07" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient4" x1="59.77" y1="87.82" x2="63.76" y2="93.95" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient5" x1="60.83" y1="85.72" x2="30.99" y2="85.72" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient6" x1="41.43" y1="70.4" x2="41.43" y2="147.05" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient7" x1="54.97" y1="86.79" x2="101.41" y2="86.79" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient8" x1="101.41" y1="102.61" x2="189.15" y2="102.61" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient9" x1="34.97" y1="53.37" x2="171.84" y2="53.37" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient10" x1="165.26" y1="30.86" x2="165.26" y2="105.45" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient11" x1="60.07" y1="173.38" x2="166.36" y2="147.33" xlink:href="#linear-gradient"/>
+  </defs>
+  <g>
+    <g>
+      <path class="st11" d="M102.96,114v-15.24l.89.14c6.61,1.03,11.44,7.06,11.49,14.31v.78s-12.38,0-12.38,0Z"/>
+      <path class="st1" d="M85.92,114v-.78c.06-6.64,5.32-12.74,12.23-14.18l.93-.19v15.16h-13.16Z"/>
+      <rect class="st0" x="85.93" y="117.87" width="13.16" height="13.15"/>
+      <rect class="st3" x="102.96" y="117.87" width="12.38" height="13.15"/>
+    </g>
+    <polygon class="st8" points="54.97 92.08 67.51 79.35 67.51 88.04 54.97 100.8 54.97 92.08"/>
+    <polygon class="st7" points="48 92.1 34.85 79.35 67.51 79.35 54.97 92.08 48 92.1"/>
+    <polygon class="st4" points="34.85 79.35 48 92.1 48 158.06 34.85 172.83 34.85 79.35"/>
+    <polygon class="st6" points="54.97 100.8 101.41 53.54 101.41 74.47 54.97 120.05 54.97 100.8"/>
+    <polygon class="st5" points="101.41 74.38 101.41 53.54 189.15 142.08 179.51 151.68 101.41 74.38"/>
+    <path class="st2" d="M34.97,74.26l.04-.81c1.14-22.98,21.25-40.98,45.8-40.98h91.03l-13.16,13.16h-77.87c-16.78,0-31.34,12.52-32.45,27.92l-.05.72h-13.34Z"/>
+    <polygon class="st10" points="158.68 105.57 158.68 45.63 171.84 32.47 171.84 119.21 158.68 105.57"/>
+  </g>
+  <path class="st9" d="M157.07,135.02c-3.59,14.06-15.54,23.59-29,23.59H47.92l-13.07,14.49,23.55-.3v18.74l19.08-18.59h50.58c17.31,0,32.72-10.88,39.79-27.35l-10.79-10.58Z"/>
+</svg>

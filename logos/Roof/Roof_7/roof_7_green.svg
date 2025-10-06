@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 224 224">
+  <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#linear-gradient2);
+      }
+
+      .st1 {
+        fill: url(#linear-gradient1);
+      }
+
+      .st2 {
+        fill: url(#linear-gradient3);
+      }
+
+      .st3 {
+        fill: url(#linear-gradient5);
+      }
+
+      .st4 {
+        fill: url(#linear-gradient4);
+      }
+
+      .st5 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="12.21" y1="110.63" x2="105.33" y2="110.63" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#adcc54"/>
+      <stop offset=".19" stop-color="#a9c953"/>
+      <stop offset=".36" stop-color="#9ebf50"/>
+      <stop offset=".53" stop-color="#8cb04c"/>
+      <stop offset=".69" stop-color="#739b46"/>
+      <stop offset=".84" stop-color="#527f3e"/>
+      <stop offset=".99" stop-color="#2a5d34"/>
+      <stop offset="1" stop-color="#275b34"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient1" x1="12.17" y1="112" x2="211.83" y2="112" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient2" x1="102.98" y1="121.01" x2="109.26" y2="121.01" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient3" x1="111.62" y1="121.01" x2="117.91" y2="121.01" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient4" x1="102.98" y1="129.17" x2="109.26" y2="129.17" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient5" x1="111.62" y1="129.17" x2="117.91" y2="129.17" xlink:href="#linear-gradient"/>
+  </defs>
+  <path class="st5" d="M105.33,86.15l-41.28,41.31-50.86,7.67-.99-.2c16.88-16.05,33.21-32.75,50.1-48.77h43.03Z"/>
+  <path class="st1" d="M12.21,137.85c-.08-1.03-.05-.65.59-.77.76-.14,1.63-.23,2.41-.35,16.58-2.51,33.74-3.25,50.35-5.81l45.08-44.77,45.41,45.22c18.03,2.48,36.29,3.28,54.37,5.34.38.04,1.48.17,1.41.75h-62.68l-38.51-38.38-38.9,38.78H12.21Z"/>
+  <rect class="st0" x="102.98" y="117.88" width="6.29" height="6.27"/>
+  <rect class="st2" x="111.62" y="117.88" width="6.29" height="6.27"/>
+  <path class="st4" d="M109.26,132.37h-6.29v-5.68c1.42-.96,4.91-.95,6.29,0v5.68Z"/>
+  <path class="st3" d="M117.91,132.37h-6.29v-5.68c1.42-.96,4.91-.95,6.29,0v5.68Z"/>
+</svg>

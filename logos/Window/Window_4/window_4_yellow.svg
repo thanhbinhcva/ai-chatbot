@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 224 224">
+  <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#linear-gradient1);
+      }
+
+      .st1 {
+        fill: url(#linear-gradient3);
+      }
+
+      .st2 {
+        fill: url(#linear-gradient4);
+      }
+
+      .st3 {
+        fill: url(#linear-gradient);
+      }
+
+      .st4 {
+        isolation: isolate;
+      }
+
+      .st5 {
+        fill: url(#linear-gradient2);
+        mix-blend-mode: overlay;
+        opacity: .6;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-2.01" y1="58" x2="159.94" y2="151.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d7e595"/>
+      <stop offset=".5" stop-color="#cfd386"/>
+      <stop offset="1" stop-color="#b2bf79"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient1" x1="30.26" y1="99.32" x2="136.81" y2="160.83" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#deda33"/>
+      <stop offset=".5" stop-color="#c1d22f"/>
+      <stop offset="1" stop-color="#92873b"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient2" x1="33.53" y1="101.2" x2="110.02" y2="145.36" xlink:href="#linear-gradient1"/>
+    <linearGradient id="linear-gradient3" x1="94.6" y1="106.44" x2="161.09" y2="106.44" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f6f192"/>
+      <stop offset=".5" stop-color="#e7e251"/>
+      <stop offset="1" stop-color="#ddd725"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient4" x1="133.61" y1="93.53" x2="174.49" y2="93.53" xlink:href="#linear-gradient3"/>
+  </defs>
+  <g class="st4">
+    <g id="Layer_1">
+      <g>
+        <path class="st3" d="M49.51,79.6v113.69l84.03-48.88V30.72l-84.03,48.88ZM128.53,140.41l-33.92,19.72V60.78l33.92-19.72v99.35Z"/>
+        <polygon class="st0" points="88.78 163.12 54.86 182.84 54.86 83.49 88.78 63.77 88.78 163.12"/>
+        <polygon class="st5" points="54.86 182.84 54.86 83.49 88.78 63.77 54.86 182.84"/>
+        <polygon class="st1" points="128.53 140.41 94.6 160.13 127.17 72.47 161.09 52.75 128.53 140.41"/>
+        <polygon class="st2" points="141.92 134.98 133.61 139.73 166.18 52.07 174.49 47.32 141.92 134.98"/>
+      </g>
+    </g>
+  </g>
+</svg>

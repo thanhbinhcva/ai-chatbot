@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 224 224">
+  <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#linear-gradient2);
+      }
+
+      .st1 {
+        fill: url(#linear-gradient1);
+      }
+
+      .st2 {
+        fill: url(#linear-gradient9);
+      }
+
+      .st3 {
+        fill: url(#linear-gradient3);
+      }
+
+      .st4 {
+        fill: url(#linear-gradient6);
+      }
+
+      .st5 {
+        fill: url(#linear-gradient8);
+      }
+
+      .st6 {
+        fill: url(#linear-gradient7);
+      }
+
+      .st7 {
+        fill: url(#linear-gradient5);
+      }
+
+      .st8 {
+        fill: url(#linear-gradient4);
+      }
+
+      .st9 {
+        fill: url(#linear-gradient11);
+      }
+
+      .st10 {
+        fill: url(#linear-gradient10);
+      }
+
+      .st11 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="109.24" y1="92.7" x2="109.24" y2="126.58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#99278d"/>
+      <stop offset=".23" stop-color="#95268b"/>
+      <stop offset=".43" stop-color="#8a2585"/>
+      <stop offset=".63" stop-color="#78247c"/>
+      <stop offset=".81" stop-color="#5f226f"/>
+      <stop offset="1" stop-color="#3e205e"/>
+      <stop offset="1" stop-color="#3e205e"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient1" x1="92.59" y1="92.62" x2="92.59" y2="126.63" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient2" x1="92.6" y1="89.57" x2="92.6" y2="125.07" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient3" x1="109.24" y1="89.57" x2="109.24" y2="125.07" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient4" x1="59.86" y1="87.82" x2="63.84" y2="93.95" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient5" x1="60.92" y1="85.72" x2="31.07" y2="85.72" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient6" x1="41.51" y1="70.4" x2="41.51" y2="147.05" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient7" x1="55.06" y1="86.79" x2="101.5" y2="86.79" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient8" x1="101.49" y1="102.61" x2="189.24" y2="102.61" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient9" x1="35.06" y1="53.37" x2="171.93" y2="53.37" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient10" x1="165.35" y1="30.86" x2="165.35" y2="105.45" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient11" x1="60.01" y1="173.37" x2="166.43" y2="147.29" xlink:href="#linear-gradient"/>
+  </defs>
+  <g>
+    <g>
+      <path class="st11" d="M103.05,114v-15.24l.89.14c6.61,1.03,11.44,7.06,11.49,14.31v.78s-12.38,0-12.38,0Z"/>
+      <path class="st1" d="M86.01,114v-.78c.06-6.64,5.32-12.74,12.23-14.18l.93-.19v15.16h-13.17Z"/>
+      <rect class="st0" x="86.02" y="117.87" width="13.15" height="13.15"/>
+      <rect class="st3" x="103.05" y="117.87" width="12.38" height="13.15"/>
+    </g>
+    <polygon class="st8" points="55.06 92.08 67.59 79.35 67.59 88.04 55.06 100.8 55.06 92.08"/>
+    <polygon class="st7" points="48.09 92.1 34.94 79.35 67.59 79.35 55.06 92.08 48.09 92.1"/>
+    <polygon class="st4" points="34.94 79.35 48.09 92.1 48.09 158.06 34.94 172.83 34.94 79.35"/>
+    <polygon class="st6" points="55.06 100.8 101.5 53.54 101.49 74.47 55.06 120.05 55.06 100.8"/>
+    <polygon class="st5" points="101.49 74.38 101.5 53.54 189.24 142.08 179.6 151.68 101.49 74.38"/>
+    <path class="st2" d="M35.06,74.26l.04-.81c1.13-22.98,21.25-40.98,45.8-40.98h91.03l-13.16,13.16h-77.87c-16.78,0-31.34,12.52-32.45,27.92l-.05.72h-13.34Z"/>
+    <polygon class="st10" points="158.77 105.57 158.77 45.63 171.93 32.47 171.93 119.21 158.77 105.57"/>
+  </g>
+  <path class="st9" d="M157.16,135.02c-3.59,14.06-15.55,23.59-29,23.59H48.01l-13.25,14.49,23.37-.3v18.74l19.45-18.59h50.58c17.31,0,32.72-10.88,39.79-27.35l-10.79-10.58Z"/>
+</svg>

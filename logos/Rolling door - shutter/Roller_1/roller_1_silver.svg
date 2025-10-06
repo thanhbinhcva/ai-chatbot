@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 224 224">
+  <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#linear-gradient2);
+      }
+
+      .st1 {
+        fill: url(#linear-gradient1);
+      }
+
+      .st2 {
+        fill: url(#linear-gradient3);
+      }
+
+      .st3 {
+        fill: url(#linear-gradient6);
+      }
+
+      .st4 {
+        fill: url(#linear-gradient8);
+      }
+
+      .st5 {
+        fill: url(#linear-gradient7);
+      }
+
+      .st6 {
+        fill: url(#linear-gradient5);
+      }
+
+      .st7 {
+        fill: url(#linear-gradient4);
+      }
+
+      .st8 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="35.42" y1="112" x2="194.58" y2="112" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c7c5c4"/>
+      <stop offset=".23" stop-color="#7e7e7e"/>
+      <stop offset=".41" stop-color="#afafb0"/>
+      <stop offset=".59" stop-color="#787778"/>
+      <stop offset=".77" stop-color="#4b4b4b"/>
+      <stop offset="1" stop-color="#bab8ba"/>
+      <stop offset="1" stop-color="#c2c2c2"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient1" x1="35.25" y1="111.41" x2="46.87" y2="111.41" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient2" x1="29.42" y1="135.42" x2="53.04" y2="135.42" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient3" x1="53.43" y1="111.5" x2="76.86" y2="111.5" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient4" x1="35.81" y1="90.79" x2="53.04" y2="90.79" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient5" x1="126.04" y1="88.19" x2="183.35" y2="88.19" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient6" x1="126.04" y1="134.64" x2="183.35" y2="134.64" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient7" x1="126.04" y1="111.4" x2="183.35" y2="111.4" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient8" x1="126.04" y1="157.96" x2="183.35" y2="157.96" xlink:href="#linear-gradient"/>
+  </defs>
+  <path class="st8" d="M194.58,177.53l-1.06.2-157.53-.1c-.15-.05-.57-.31-.57-.4v-23.43s.27-.29.29-.29h23.52l.22-23.79,23.79-.22v-35.72s-.27-.29-.29-.29h-23.23s-.29-.27-.29-.29v-14.91l53.7-31.11,1.97-.92,79.48,45.78v85.48ZM124.88,59.42c-.11-.96-1.06-1.04-1.59-1.37-.49-.31-.81-.83-1.64-.9-.96-.08-.51.47-.56.94-.11.94-.07,1.3-.08,2.19-.34,36.27.12,72.56,0,108.83,0,.88-.54,1.63.38,2.31l64.39.09c.78,0,2.56.54,2.79-.67l-.11-75.02c-.11-.38-1.34-1.25-1.76-1.52-4.39-2.94-10.04-5.15-14.45-8.15-1.16-.79-1.23-.52-2.12-.98-6.55-3.42-12.94-8.11-19.5-11.34-2.81-1.38-5.6-3.75-8.4-4.96-.46-.2-1.1-.37-1.49-.54-5.27-2.38-10.79-5.98-15.88-8.91Z"/>
+  <path class="st1" d="M46.85,117.31h-10.94c-.29,0-.46-1.34-.49-1.64-.18-2.06-.26-7.15,0-9.12.1-.79.35-.8,1.06-.87,2.11-.21,7.66-.26,9.7,0,.27.03.5.05.69.28l-.02,11.35Z"/>
+  <path class="st0" d="M53.04,147.32l-23.62-.29v-23.23s.27-.29.29-.29h23.04l.29,23.82Z"/>
+  <path class="st2" d="M53.43,99.69h23.14s.29.27.29.29v23.04s-.27.29-.29.29h-22.85s-.29-.27-.29-.29v-23.33Z"/>
+  <rect class="st7" x="35.81" y="82.07" width="17.23" height="17.43"/>
+  <path class="st6" d="M183.35,110.54l-57.31-28.17v-16.26c0-.63,1.43.05,1.68.26,18.51,10.81,37.21,21.31,55.63,32.27v11.91Z"/>
+  <path class="st3" d="M183.35,147.71l-1.62-.03c-14.23-2.31-28.45-4.73-42.67-7.09-3.71-.62-8.5-.92-12.03-1.92-.25-.07-.99-.28-.99-.55v-16.26c0-.11.33-.3.49-.3,13.44,3.06,26.79,6.63,40.16,9.99,3.79.95,7.65,1.73,11.44,2.7,1.74.44,3.59.91,5.22,1.55v11.91Z"/>
+  <path class="st5" d="M183.35,129.12l-57.31-18.88v-16.26c0-.1.32-.32.48-.3l55.47,22.76,1.36.77v11.91Z"/>
+  <path class="st4" d="M183.35,154.29v12.2h-57.12c.06-.19-.19-.42-.19-.48v-16.26c0-.43,2.17-.31,2.61-.29,2.37.1,4.8.57,7.17.77,11.14.94,22.35,1.75,33.49,2.71,4.68.41,9.37.87,14.04,1.35Z"/>
+</svg>

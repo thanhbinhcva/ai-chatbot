@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 224 224">
+  <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
+  <defs>
+    <style>
+      .st0 {
+        mask: url(#mask);
+      }
+
+      .st1 {
+        filter: url(#luminosity-noclip);
+      }
+
+      .st2 {
+        fill: url(#linear-gradient3);
+      }
+
+      .st3 {
+        fill: url(#linear-gradient5);
+      }
+
+      .st4 {
+        filter: url(#luminosity-noclip2);
+      }
+
+      .st5 {
+        mask: url(#mask-2);
+      }
+
+      .st6 {
+        mask: url(#mask-3);
+      }
+
+      .st7 {
+        mask: url(#mask-4);
+      }
+
+      .st8 {
+        mask: url(#mask-5);
+      }
+
+      .st9 {
+        mask: url(#mask-1);
+      }
+
+      .st10 {
+        fill: #283d78;
+      }
+
+      .st10, .st11, .st12, .st13 {
+        fill-rule: evenodd;
+      }
+
+      .st11 {
+        fill: #97d0db;
+      }
+
+      .st12 {
+        fill: url(#linear-gradient);
+      }
+
+      .st13 {
+        fill: url(#linear-gradient1);
+      }
+
+      .st14 {
+        fill: url(#linear-gradient2);
+      }
+
+      .st14, .st15 {
+        mix-blend-mode: multiply;
+      }
+
+      .st15 {
+        fill: url(#linear-gradient4);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="394.28" y1="-111.01" x2="394.28" y2="-255.78" gradientTransform="translate(-238.56 -8.06) scale(.89 -.89)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#283d78"/>
+      <stop offset="1" stop-color="#50a2c5"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient1" x1="394.28" y1="-184.24" x2="394.28" y2="3.56" gradientTransform="translate(-238.56 -8.06) scale(.89 -.89)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2c67ab"/>
+      <stop offset="1" stop-color="#8fccd1"/>
+    </linearGradient>
+    <filter id="luminosity-noclip" x="32.56" y="29.94" width="158.89" height="68.48" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-color="#fff" result="bg"/>
+      <feBlend in="SourceGraphic" in2="bg"/>
+    </filter>
+    <filter id="luminosity-noclip1" x="32.56" y="-8304" width="158.89" height="32766" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-color="#fff" result="bg"/>
+      <feBlend in="SourceGraphic" in2="bg"/>
+    </filter>
+    <mask id="mask-2" x="32.56" y="-8304" width="158.89" height="32766" maskUnits="userSpaceOnUse"/>
+    <linearGradient id="linear-gradient2" x1="394.29" y1="4.65" x2="394.29" y2="-102.71" gradientTransform="translate(-238.56 -8.06) scale(.89 -.89)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#000"/>
+    </linearGradient>
+    <mask id="mask-1" x="32.56" y="29.94" width="158.89" height="68.48" maskUnits="userSpaceOnUse">
+      <g class="st1">
+        <g class="st5">
+          <rect class="st14" x="32.56" y="29.94" width="158.89" height="68.48"/>
+        </g>
+      </g>
+    </mask>
+    <linearGradient id="linear-gradient3" x1="394.29" y1="4.65" x2="394.29" y2="-102.71" gradientTransform="translate(-238.56 -8.06) scale(.89 -.89)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <mask id="mask" x="32.56" y="29.94" width="158.89" height="68.48" maskUnits="userSpaceOnUse">
+      <g id="id44">
+        <g class="st9">
+          <rect class="st2" x="32.56" y="29.94" width="158.89" height="68.48"/>
+        </g>
+      </g>
+    </mask>
+    <filter id="luminosity-noclip2" x="54.95" y="68.07" width="114.1" height="77.46" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-color="#fff" result="bg"/>
+      <feBlend in="SourceGraphic" in2="bg"/>
+    </filter>
+    <filter id="luminosity-noclip3" x="54.95" y="-8304" width="114.1" height="32766" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-color="#fff" result="bg"/>
+      <feBlend in="SourceGraphic" in2="bg"/>
+    </filter>
+    <mask id="mask-5" x="54.95" y="-8304" width="114.1" height="32766" maskUnits="userSpaceOnUse"/>
+    <linearGradient id="linear-gradient4" x1="394.28" y1="9.9" x2="394.28" y2="-158.14" xlink:href="#linear-gradient2"/>
+    <mask id="mask-4" x="54.95" y="68.07" width="114.1" height="77.46" maskUnits="userSpaceOnUse">
+      <g class="st4">
+        <g class="st8">
+          <rect class="st15" x="54.95" y="68.07" width="114.1" height="77.46"/>
+        </g>
+      </g>
+    </mask>
+    <linearGradient id="linear-gradient5" x1="394.28" y1="9.9" x2="394.28" y2="-158.14" xlink:href="#linear-gradient3"/>
+    <mask id="mask-3" x="54.95" y="68.07" width="114.1" height="77.46" maskUnits="userSpaceOnUse">
+      <g id="id46">
+        <g class="st7">
+          <rect class="st3" x="54.95" y="68.07" width="114.1" height="77.46"/>
+        </g>
+      </g>
+    </mask>
+  </defs>
+  <path class="st12" d="M186.65,44.6c-23.02-9.43-48.23-14.62-74.65-14.62s-51.62,5.19-74.65,14.62c-17.8,57.2,15.9,134.58,74.65,149.43,58.76-14.85,92.46-92.23,74.65-149.43ZM128.59,114.66c5.14-4.57,8.39-11.25,8.39-18.68,0-13.79-11.17-24.98-24.98-24.98s-24.98,11.18-24.98,24.98c0,7.43,3.24,14.11,8.4,18.68l-4.18,38.33c6.62,1.81,13.58,2.76,20.76,2.76s14.15-.95,20.76-2.76l-4.17-38.33Z"/>
+  <path class="st13" d="M112,29.97c-26.42,0-51.62,5.19-74.65,14.62-10.66,34.25-2.85,75.75,17.76,106.72-2.72-50.82,42.66-77.01,46.07-77.84,3.28-1.58,6.95-2.47,10.83-2.47s7.56.89,10.84,2.47c3.4.83,48.78,27.01,46.07,77.84,20.6-30.97,28.4-72.46,17.75-106.72-23.02-9.43-48.23-14.62-74.65-14.62Z"/>
+  <path class="st10" d="M112,155.75c-7.18,0-14.14-.95-20.76-2.76,0,0-3.01,26.81,3.21,34.44,5.56,2.82,11.42,5.05,17.54,6.6,6.13-1.55,12-3.78,17.55-6.6,6.23-7.63,3.2-34.44,3.2-34.44-6.61,1.81-13.57,2.76-20.76,2.76h0Z"/>
+  <g class="st0">
+    <path class="st11" d="M34.36,98.39c17.32-62.84,137.96-62.84,155.27,0,3.04-18.27,2.27-36.91-2.98-53.79-23.02-9.43-48.23-14.62-74.65-14.62s-51.62,5.19-74.65,14.62c-5.25,16.88-6.02,35.52-2.98,53.79Z"/>
+  </g>
+  <g class="st6">
+    <path class="st11" d="M122.84,70.58c-3.28-1.58-6.96-2.47-10.84-2.47s-7.55.89-10.83,2.47c-3.34.81-47.05,26.02-46.18,74.93.85-47.01,42.9-71.23,46.18-72.03,3.28-1.58,6.95-2.47,10.83-2.47s7.56.89,10.84,2.47c3.27.8,45.32,25.02,46.17,72.03.88-48.91-42.83-74.12-46.17-74.93Z"/>
+  </g>
+</svg>
