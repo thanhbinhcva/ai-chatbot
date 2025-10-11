@@ -1,4 +1,52 @@
 {
-  "session_id": "638783fd",
-  "raw_output": "```json\n{\n  \"session_id\": \"638783fd\",\n  \"dealer_id\": \"0986899001\",\n  \"brand_name_full\": \"xưởng nhôm kính Thanh Hằng\",\n  \"location\": \"212 Quang Trung, Hà Đông, Hà Nội\",\n  \"business_model\": \"Đại lý chuyên phân phối sản phẩm\",\n  \"main_products\": [\n    \"cửa nhôm\",\n    \"cửa kính\",\n    \"vách ngăn\",\n    \"cửa cuốn\"\n  ],\n  \"main_services\": [\n    \"chăm sóc khách hàng\",\n    \"lắp đặt\"\n  ],\n  \"product_portfolio\": [\n    \"cửa nhôm\",\n    \"cửa kính\",\n    \"vách ngăn\",\n    \"cửa cuốn\"\n  ],\n  \"target_customers\": [\n    \"hộ gia đình\",\n    \"công trình xây dựng\",\n    \"văn phòng\"\n  ],\n  \"competitive_advantage\": [\n    \"giá tốt nhất thị trường\",\n    \"sản phẩm độc quyền\",\n    \"dịch vụ chăm sóc khách hàng chu đáo\",\n    \"tiến độ lắp đặt nhanh gọn\"\n  ],\n  \"core_values\": [\n    \"Uy tín\",\n    \"Chất lượng\"\n  ],\n  \"slogan\": \"\",\n  \"future_vision\": [\n    \"mở rộng thêm chi nhánh\",\n    \"trở thành nhà phân phối hàng đầu khu vực\"\n  ],\n  \"logo_style\": [\n    \"Mạnh mẽ & Tin cậy\"\n  ],\n  \"main_color\": [\n    \"xanh dương\"\n  ],\n  \"revenue\": \"\",\n  \"logo_shape\": [\n    \"tòa nhà\"\n  ]\n}\n```"
+  "session_id": "62e3f3d3",
+  "dealer_id": "0986899001",
+  "brand_name_full": "Nhôm kính An Phát",
+  "location": "212 Quang Trung, Hà Đông, Hà Nội",
+  "business_model": "Vừa sản xuất vừa thương mại",
+  "main_products": [
+    "cửa nhôm",
+    "cửa kính",
+    "vách ngăn",
+    "cửa cuốn",
+    "phụ kiện"
+  ],
+  "main_services": [],
+  "product_portfolio": [
+    "cửa nhôm",
+    "cửa kính",
+    "vách ngăn",
+    "cửa cuốn",
+    "phụ kiện"
+  ],
+  "target_customers": [
+    "hộ gia đình",
+    "chủ thầu xây dựng",
+    "dự án lớn"
+  ],
+  "competitive_advantage": [
+    "tay nghề thợ cao",
+    "sản phẩm chất lượng",
+    "giá thành cạnh tranh"
+  ],
+  "core_values": [
+    "Uy tín",
+    "Chất lượng",
+    "Tận tâm"
+  ],
+  "slogan": "An Phát – Uy Tín Kiến Tạo, Chất Lượng Dẫn Đầu.",
+  "future_vision": [
+    "Uy tín kiến tạo",
+    "Chất lượng dẫn đầu"
+  ],
+  "logo_style": [
+    "Hiện đại (Modern Geometric)"
+  ],
+  "main_color": [
+    "xanh dương"
+  ],
+  "revenue": "200 triệu đồng/tháng",
+  "logo_shape": [
+    "cách điệu từ tên thương hiệu An Phát"
+  ]
 }

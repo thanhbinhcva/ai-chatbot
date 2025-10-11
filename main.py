@@ -7,14 +7,14 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import LLMChain
-
+from logo_generator import generate_logo_with_ai
 # 1. Load API key
 load_dotenv()
 google_api_key = os.getenv("GEMINI_API_KEY")
 
 # 2. Khởi tạo Gemini LLM
 llm = ChatGoogleGenerativeAI(
-    model="gemini-2.5-pro",
+    model="gemini-2.5-flash",
     temperature=0.4,
     google_api_key=google_api_key
 )
@@ -61,17 +61,18 @@ Nhiệm vụ:
  11. Biểu tượng/logo mong muốn (ví dụ: cửa, cửa sổ, toà nhà, mái nhà, khiên, bánh răng, hình học trừu tượng...)                                             
  12. Màu sắc chủ đạo
  13. Doanh thu trung bình theo tháng/năm
- 14. **Slogan / khẩu hiệu thương hiệu**:  
-   👉 “Khi đã có logo theo mong muốn, em hiểu rằng anh/chị đang có tâm thế phát triển thương hiệu lâu dài.  
-   Vậy anh/chị có thể chia sẻ **dự định phát triển của mình trong tương lai** được không, để em có thể giúp anh/chị xây dựng một **slogan mang tính bền vững và định hướng tương lai** hơn không ạ?”  
-   - Nếu khách hàng chưa có slogan → hãy **đưa ra 3 gợi ý** ngắn gọn, dễ nhớ và phù hợp với phong cách thương hiệu của họ.
-
+ 14. **Gợi ý slogan:**
+    **đề xuất 5 slogan phù hợp** thể hiện giá trị cốt lõi, lợi thế và định hướng phát triển trong 3 năm tới. Mỗi slogan trình bày 1 dòng, đánh số 1–5, kèm theo lý do ngắn gọn vì sao slogan đó phù hợp và cho người dùng chọn hoặc chỉnh sửa.
+                                               
  Hướng dẫn hội thoại:
     - Hỏi từng nội dung một cách tự nhiên, không đọc danh sách.
     - Dựa trên câu trả lời trước để điều chỉnh câu hỏi sau.
-    - Khi đã đủ thông tin → viết bản tóm tắt thương hiệu rõ ràng, ngắn gọn, và gợi ý thêm:
-        - 3 ý tưởng slogan (nếu chưa có hoặc cần làm mới)
-        - 1 nhóm logo phù hợp nhất (từ các nhóm: abstract geometric, building/tower, door, gear/mechanism, house, lock, rolling door/shutter, roof, shield, window)
+    - Khi đã đủ thông tin → viết bản tóm tắt thương hiệu rõ ràng, ngắn gọn.
+    - Nếu người dùng cho biết họ muốn **logo cách điệu tên thương hiệu** (ví dụ: "logo chữ", "cách điệu chữ", "wordmark", "dùng tên thương hiệu làm logo", "logotype"):
+        → **KHÔNG gợi ý nhóm logo có sẵn.**
+        → Thay vào đó, chỉ ghi nhận rõ ràng trong phần tóm tắt rằng họ mong muốn **logo cách điệu theo tên thương hiệu**.
+    - Nếu KHÔNG có dấu hiệu này thì mới gợi ý **1 nhóm logo phù hợp nhất** (từ các nhóm: abstract geometric, building/tower, door, gear/mechanism, house, lock, rolling door/shutter, roof, shield, window).
+
 Kết thúc bằng câu hỏi xác nhận:
 "Anh/chị thấy phần tóm tắt này đã đúng và đủ chưa, hay cần chỉnh sửa thêm không ạ?"
 
@@ -119,7 +120,13 @@ Chỉ trả về JSON hợp lệ, không thêm text ngoài JSON.
     raw_text = response.get("text", "").strip()
 
     try:
-        return json.loads(raw_text)
+        match = re.search(r"\{[\s\S]*\}", raw_text)
+        if match:
+            json_text = match.group()
+            return json.loads(json_text)
+        else:
+            print("⚠️ Không tìm thấy JSON hợp lệ trong phản hồi.")
+            return {"session_id": session_id, "raw_output": raw_text}
     except json.JSONDecodeError:
         print("⚠️ Không parse được JSON, lưu raw text thay thế.")
         return {"session_id": session_id, "raw_output": raw_text}
@@ -191,6 +198,31 @@ def save_brand_profile(data, filename="brand_profile.json"):
         json.dump(data, f, ensure_ascii=False, indent=2)
     print(f"✅ Hồ sơ thương hiệu đã lưu vào {filename}")
 
+# 🧠 Hàm nhận dạng linh hoạt mong muốn "cách điệu tên thương hiệu"
+def wants_wordmark_logo(logo_shape_field):
+    """
+    Kiểm tra xem người dùng có muốn logo cách điệu tên thương hiệu không.
+    Có thể nhận dạng qua nhiều cách diễn đạt khác nhau.
+    """
+    if not logo_shape_field:
+        return False
+
+    # Gộp tất cả text lại (nếu là list)
+    if isinstance(logo_shape_field, list):
+        combined = " ".join(logo_shape_field).lower()
+    else:
+        combined = str(logo_shape_field).lower()
+
+    # Danh sách các từ khóa linh hoạt
+    keywords = [
+        "cách điệu", "cách điệu tên", "chữ cách điệu", "logo chữ", 
+        "kiểu chữ", "wordmark", "text-only", "lettermark", 
+        "logotype", "dạng chữ", "tên thương hiệu cách điệu", 
+        "biểu tượng chữ"
+    ]
+
+    return any(keyword in combined for keyword in keywords)
+
 # 8. Chạy hội thoại
 def run_chatbot():
     print("🤖 Chatbot Gemini - Tư vấn thương hiệu\n")
@@ -219,12 +251,25 @@ def run_chatbot():
             brand_profile = extract_info(final_summary)
             save_brand_profile(brand_profile)
             # Gợi ý label logo
-            logo_suggestion = recommend_logo(final_summary)
-            print("\n🎨 Logo đề xuất cho thương hiệu của anh/chị:")
-            print("👉 Nhóm logo:", logo_suggestion["recommended_category"])
-            print("📌 Lý do:", logo_suggestion["reason"])
-            print("📂 Folder:", logo_suggestion["folder_path"])
-            
+            # Nếu logo_shape là "Cách điệu tên thương hiệu" → gọi AI sinh logo
+            if wants_wordmark_logo(brand_profile.get("logo_shape", [])):
+                print("\n🤖 Phát hiện yêu cầu tạo logo cách điệu tên thương hiệu...")
+                ai_logo = generate_logo_with_ai(
+                    brand_profile, 
+                    google_api_key=google_api_key, 
+                    output_path="generated_image.png"
+                )
+                if ai_logo:
+                    print(f"🎨 Logo AI đã được tạo và lưu tại: {ai_logo}")
+                else:
+                    print("⚠️ Không thể tạo logo AI, vui lòng thử lại sau.")
+            else:
+                # Nếu không phải, gợi ý logo từ thư mục có sẵn
+                logo_suggestion = recommend_logo(final_summary)
+                print("\n🎨 Logo đề xuất cho thương hiệu của anh/chị:")
+                print("👉 Nhóm logo:", logo_suggestion["recommended_category"])
+                print("📌 Lý do:", logo_suggestion["reason"])
+                print("📂 Folder:", logo_suggestion["folder_path"])
             break
         else:
             fix_prompt = ChatPromptTemplate.from_template("""
