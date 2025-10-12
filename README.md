@@ -82,5 +82,56 @@ Cấu trúc JSON đầu ra
   "main_color": ["Xanh dương – tin cậy"],
   "revenue": "200 triệu / tháng"
 }
-
 ```
+
+## 5. Chạy API
+
+### 🗨️ 1. POST /chat
+
+Dùng để gửi tin nhắn của người dùng và nhận phản hồi từ chatbot.
+Chatbot sẽ lưu lại tiến trình hội thoại và tự động xác định thông tin nào đã đủ hoặc còn thiếu để xây dựng hồ sơ thương hiệu.
+```bash
+Request body
+{
+  "user_input": ""
+}
+
+Response
+{
+  "bot_reply": ""
+}
+```
+### 🧩 2. POST /finalize
+Được gọi khi người dùng xác nhận bản tóm tắt thương hiệu.
+API này tổng hợp toàn bộ thông tin đã thu thập trong buổi trò chuyện và xuất ra hồ sơ thương hiệu hoàn chỉnh ở định dạng JSON.
+```bash
+Request body
+
+
+Response
+{
+  "session_id": "b540b76c",
+  "dealer_id": "0365139601",
+  "brand_name_full": "Coffee Star",
+  "location": "Hà Nội",
+  "business_model": "Đại lý sản xuất",
+  "main_products": ["Cửa nhôm"],
+  "target_customers": ["Khách hàng phổ thông"],
+  "competitive_advantage": ["Giá cả phải chăng"],
+  "core_values": ["Bền bỉ & Ổn định"],
+  "slogan": "Coffee Star: Cửa nhôm bền vững, Giá trị vượt trội.",
+  "future_vision": ["Phát triển mạnh mẽ"],
+  "logo_style": ["Tối giản (Minimalist)"],
+  "main_color": ["Xám bạc", "Xám than", "Xanh dương"],
+  "logo_shape": ["Cửa", "Cửa sổ"]
+}
+```
+Ghi chú
+
+API này đánh dấu kết thúc phiên hội thoại, lưu kết quả vào cơ sở dữ liệu hoặc file brand_profile.json.
+
+Dữ liệu phản hồi có thể được dùng làm đầu vào cho các module AI khác, như:
+
+Logo Generator (tạo logo AI)
+Brand Kit Generator
+E-Catalog Builder
