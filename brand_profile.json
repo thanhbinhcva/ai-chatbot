@@ -1,52 +1,51 @@
 {
-  "session_id": "62e3f3d3",
+  "session_id": "eabf5c99",
   "dealer_id": "0986899001",
   "brand_name_full": "Nhôm kính An Phát",
   "location": "212 Quang Trung, Hà Đông, Hà Nội",
   "business_model": "Vừa sản xuất vừa thương mại",
   "main_products": [
-    "cửa nhôm",
-    "cửa kính",
-    "vách ngăn",
-    "cửa cuốn",
-    "phụ kiện"
+    "Cửa nhôm",
+    "Cửa kính",
+    "Vách ngăn",
+    "Cửa cuốn"
   ],
-  "main_services": [],
+  "main_services": [
+    "Cung cấp các giải pháp tổng thể liên quan đến việc lắp đặt và thi công sản phẩm nhôm kính"
+  ],
   "product_portfolio": [
-    "cửa nhôm",
-    "cửa kính",
-    "vách ngăn",
-    "cửa cuốn",
-    "phụ kiện"
+    "Cửa nhôm",
+    "Cửa kính",
+    "Vách ngăn",
+    "Cửa cuốn",
+    "Giải pháp tổng thể liên quan đến việc lắp đặt và thi công sản phẩm"
   ],
   "target_customers": [
-    "hộ gia đình",
-    "chủ thầu xây dựng",
-    "dự án lớn"
+    "Các hộ gia đình",
+    "Các doanh nghiệp nhỏ"
   ],
   "competitive_advantage": [
-    "tay nghề thợ cao",
-    "sản phẩm chất lượng",
-    "giá thành cạnh tranh"
+    "Tay nghề nhân công cao",
+    "Sản phẩm chất lượng",
+    "Dịch vụ hậu mãi tốt"
   ],
   "core_values": [
     "Uy tín",
     "Chất lượng",
     "Tận tâm"
   ],
-  "slogan": "An Phát – Uy Tín Kiến Tạo, Chất Lượng Dẫn Đầu.",
+  "slogan": "An Phát: Chất lượng Vàng, Uy tín Bền vững",
   "future_vision": [
-    "Uy tín kiến tạo",
-    "Chất lượng dẫn đầu"
+    "Khách hàng nhớ đến An Phát là nơi đi đầu trong việc cung cấp những giải pháp, sản phẩm chất lượng nhất đến tay người dùng trên toàn Hà Nội"
   ],
   "logo_style": [
     "Hiện đại (Modern Geometric)"
   ],
   "main_color": [
-    "xanh dương"
+    "Xanh dương"
   ],
   "revenue": "200 triệu đồng/tháng",
   "logo_shape": [
-    "cách điệu từ tên thương hiệu An Phát"
+    "Khối hình học trừu tượng"
   ]
 }
