@@ -1,0 +1,322 @@
+{
+  "info": {
+    "name": "Logo Selection API - New Flow",
+    "description": "API workflow: Logo → Color → Layout → Background → Customize → Export",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "version": "2.0.0"
+  },
+  "item": [
+    {
+      "name": "1. Initialize Session",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "// Auto-save sessionId to collection variable",
+              "if (pm.response.code === 200 || pm.response.code === 201) {",
+              "    var jsonData = pm.response.json();",
+              "    if (jsonData.success && jsonData.data.sessionId) {",
+              "        var sessionId = jsonData.data.sessionId;",
+              "        ",
+              "        // Save to collection variable (preferred)",
+              "        pm.collectionVariables.set('sessionId', sessionId);",
+              "        ",
+              "        // Also save to environment if exists",
+              "        if (pm.environment.name) {",
+              "            pm.environment.set('sessionId', sessionId);",
+              "        }",
+              "        ",
+              "        console.log('✅ SessionId saved:', sessionId);",
+              "        console.log('✅ You can now run the next steps!');",
+              "    }",
+              "}",
+              "",
+              "// Show test result",
+              "pm.test('Session initialized successfully', function() {",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.be.true;",
+              "    pm.expect(jsonData.data.sessionId).to.exist;",
+              "    pm.expect(jsonData.data.logos).to.be.an('array');",
+              "    pm.expect(jsonData.data.logos.length).to.be.above(0);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"session_id\": \"62e3f3d3\",\n  \"dealer_id\": \"0986899001\",\n  \"brand_name_full\": \"Nhôm kính An Phát\",\n  \"location\": \"212 Quang Trung, Hà Đông, Hà Nội\",\n  \"business_model\": \"Vừa sản xuất vừa thương mại\",\n  \"main_products\": [\n    \"cửa nhôm\",\n    \"cửa kính\",\n    \"vách ngăn\",\n    \"cửa cuốn\",\n    \"phụ kiện\"\n  ],\n  \"main_services\": [],\n  \"product_portfolio\": [\n    \"cửa nhôm\",\n    \"cửa kính\",\n    \"vách ngăn\",\n    \"cửa cuốn\",\n    \"phụ kiện\"\n  ],\n  \"target_customers\": [\n    \"hộ gia đình\",\n    \"chủ thầu xây dựng\",\n    \"dự án lớn\"\n  ],\n  \"competitive_advantage\": [\n    \"tay nghề thợ cao\",\n    \"sản phẩm chất lượng\",\n    \"giá thành cạnh tranh\"\n  ],\n  \"core_values\": [\n    \"Uy tín\",\n    \"Chất lượng\",\n    \"Tận tâm\"\n  ],\n  \"slogan\": \"An Phát – Uy Tín Kiến Tạo, Chất Lượng Dẫn Đầu.\",\n  \"future_vision\": [\n    \"Uy tín kiến tạo\",\n    \"Chất lượng dẫn đầu\"\n  ],\n  \"logo_style\": [\n    \"Hiện đại (Modern Geometric)\"\n  ],\n  \"main_color\": [\n    \"xanh dương\"\n  ],\n  \"revenue\": \"200 triệu đồng/tháng\",\n  \"logo_shape\": [\n    \"cách điệu từ tên thương hiệu An Phát\"\n  ]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/workflow/initialize",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "workflow", "initialize"]
+        },
+        "description": "Initialize session and get logo list (original color)"
+      },
+      "response": []
+    },
+    {
+      "name": "2. Select Logo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"logoId\": \"Door-1\",\n  \"category\": \"Door\",\n  \"variant\": 1\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/workflow/{{sessionId}}/logo",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "workflow", "{{sessionId}}", "logo"]
+        },
+        "description": "Select logo → Get 9 color options"
+      },
+      "response": []
+    },
+    {
+      "name": "3. Select Color",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"color\": \"blue\",\n  \"colorUrl\": \"https://pub-899d2a26777749e09d0cc4628befdc61.r2.dev/image-logo/Door/door_1/door_1_blue.svg\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/workflow/{{sessionId}}/color",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "workflow", "{{sessionId}}", "color"]
+        },
+        "description": "Select color → Get 20 layout options (Avatar, Billboard, Card, Cover)"
+      },
+      "response": []
+    },
+    {
+      "name": "4. Select Layout",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"layoutId\": \"avatar-1\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/workflow/{{sessionId}}/layout",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "workflow", "{{sessionId}}", "layout"]
+        },
+        "description": "⭐ NEW POSITION: Select single layout → Get 26 background options"
+      },
+      "response": []
+    },
+    {
+      "name": "5. Select Background",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"backgroundId\": \"color-1\",\n  \"type\": \"color\",\n  \"value\": \"#FFFFFF\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/workflow/{{sessionId}}/background",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "workflow", "{{sessionId}}", "background"]
+        },
+        "description": "⭐ NEW POSITION: Select background → Get default customization"
+      },
+      "response": []
+    },
+    {
+      "name": "5b. Select Background (Image)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"backgroundId\": \"image-1\",\n  \"type\": \"image\",\n  \"value\": \"https://pub-899d2a26777749e09d0cc4628befdc61.r2.dev/Background/background_1.jpg\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/workflow/{{sessionId}}/background",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "workflow", "{{sessionId}}", "background"]
+        },
+        "description": "Alternative: Select image background"
+      },
+      "response": []
+    },
+    {
+      "name": "6. Customize Content",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"brandName\": \"Nhôm Kính An Phát - Premium\",\n  \"slogan\": \"Chất Lượng Là Danh Dự\",\n  \"phoneNumber\": \"0986899001\",\n  \"location\": \"212 Quang Trung, Hà Đông, Hà Nội\",\n  \"textColor\": \"#0066CC\",\n  \"textFont\": \"Arial Bold\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/workflow/{{sessionId}}/customization",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "workflow", "{{sessionId}}", "customization"]
+        },
+        "description": "⭐ NEW STEP: Customize text, color, and font"
+      },
+      "response": []
+    },
+    {
+      "name": "7. Finalize Export",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/workflow/{{sessionId}}/export",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "workflow", "{{sessionId}}", "export"]
+        },
+        "description": "⭐ NEW ENDPOINT: Get final export JSON with all customizations"
+      },
+      "response": []
+    },
+    {
+      "name": "Utils: Get Session Status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/workflow/{{sessionId}}/status",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "workflow", "{{sessionId}}", "status"]
+        },
+        "description": "Check current step and completed selections"
+      },
+      "response": []
+    },
+    {
+      "name": "Utils: Reset Session",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"step\": \"color\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/workflow/{{sessionId}}/reset",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "workflow", "{{sessionId}}", "reset"]
+        },
+        "description": "Reset to specific step: logo, color, layout, background, or customization"
+      },
+      "response": []
+    },
+    {
+      "name": "Utils: Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["health"]
+        },
+        "description": "Check if API server is running"
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "sessionId",
+      "value": "",
+      "type": "string",
+      "description": "⚠️ AUTO-FILLED: Run 'Initialize Session' first, sessionId will be saved automatically"
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "// Check if sessionId exists",
+          "if (!pm.collectionVariables.get('sessionId') && !pm.environment.get('sessionId')) {",
+          "    console.warn('⚠️ No sessionId found! Run \"1. Initialize Session\" first.');",
+          "}"
+        ]
+      }
+    }
+  ]
+}

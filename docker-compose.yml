@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  # Python AI Chatbot Service
+  ai-chatbot:
+    build:
+      context: ./ai-chatbot
+      dockerfile: Dockerfile
+    container_name: ai-chatbot
+    ports:
+      - "8000:8000"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - MONGODB_URI=${MONGODB_URI}
+      - API_FIND_IMG_URL=http://api-find-img:3000
+    volumes:
+      - ./ai-chatbot:/app
+      - /app/__pycache__
+    networks:
+      - app-network
+    depends_on:
+      - api-find-img
+    restart: unless-stopped
+
+  # Node.js API Find Image Service
+  api-find-img:
+    build:
+      context: ./API_find-img
+      dockerfile: Dockerfile
+    container_name: api-find-img
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=${PORT}
+      - R2_ENDPOINT_URL=${R2_ENDPOINT_URL}
+      - R2_BUCKET_NAME=${R2_BUCKET_NAME}
+      - R2_ACCESS_KEY_ID=${R2_ACCESS_KEY_ID}
+      - R2_SECRET_ACCESS_KEY=${R2_SECRET_ACCESS_KEY}
+      - R2_PUBLIC_DOMAIN=${R2_PUBLIC_DOMAIN}
+      - R2_REGION=${R2_REGION}
+      - R2_BASE_URL=${R2_BASE_URL}
+    volumes:
+      - ./API_find-img:/app
+      - /app/node_modules
+    networks:
+      - app-network
+    restart: unless-stopped
+
+networks:
+  app-network:
+    driver: bridge
