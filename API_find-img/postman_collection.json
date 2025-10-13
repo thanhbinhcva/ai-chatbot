@@ -131,7 +131,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"layoutId\": \"avatar-1\"\n}"
+          "raw": "{\n  \"layoutId\": \"Avt-1\"\n}"
         },
         "url": {
           "raw": "http://localhost:3000/api/workflow/{{sessionId}}/layout",
@@ -140,7 +140,7 @@
           "port": "3000",
           "path": ["api", "workflow", "{{sessionId}}", "layout"]
         },
-        "description": "⭐ NEW POSITION: Select single layout → Get 26 background options"
+        "description": "⭐ Select layout (Avt-1, Billboard-1, Card-1, Cover-1) → Get 26 background options"
       },
       "response": []
     },

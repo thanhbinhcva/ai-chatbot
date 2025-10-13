@@ -73,7 +73,7 @@ const testScenarios = {
       value: "#FFFFFF"
     },
     layoutSelection: {
-      layouts: ["avatar-1", "card-1", "billboard-1"]
+      layouts: ["Avt-1", "Card-1", "Billboard-1"]
     }
   },
 
@@ -100,7 +100,7 @@ const testScenarios = {
       value: "https://<account-id>.r2.cloudflarestorage.com/<bucket-name>/Background/bg_5.jpg"
     },
     layoutSelection: {
-      layouts: ["cover-1"]
+      layouts: ["Cover-1"]
     }
   },
 
@@ -127,7 +127,7 @@ const testScenarios = {
       value: "#1976D2"
     },
     layoutSelection: {
-      layouts: ["avatar-1", "card-2"]
+      layouts: ["Avt-1", "Card-2"]
     }
   }
 };

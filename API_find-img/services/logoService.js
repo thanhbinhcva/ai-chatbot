@@ -177,18 +177,32 @@ class LogoService {
     return backgrounds;
   }
 
+  // Get actual file prefix for each layout type
+  getLayoutFilePrefix(type) {
+    const prefixMap = {
+      'Avatar': 'Avt',        // Shortened: Avt-1.svg
+      'Billboard': 'Billboard', // Full: Billboard-1.svg
+      'Card': 'Card',          // Full: Card-1.svg (not yet on R2)
+      'Cover': 'Cover'         // Full: Cover-1.svg (not yet on R2)
+    };
+    return prefixMap[type] || type;
+  }
+
   // Get layouts
   getLayouts() {
     const layouts = [];
 
     layoutTypes.forEach(type => {
       // Each type has 5 variants
+      const filePrefix = this.getLayoutFilePrefix(type);
+      
       for (let i = 1; i <= 5; i++) {
-        const fileName = `${type.toLowerCase()}_${i}.svg`;
-        const thumbFileName = `${type.toLowerCase()}_${i}_thumb.jpg`;
+        // Use actual R2 file naming: Avt-1.svg, Billboard-1.svg
+        const fileName = `${filePrefix}-${i}.svg`;
+        const thumbFileName = `${filePrefix}-${i}_thumb.jpg`;
         
         layouts.push({
-          id: `${type.toLowerCase()}-${i}`,
+          id: `${filePrefix}-${i}`,  // Use actual prefix in ID
           type,
           name: `${type} ${i}`,
           url: `${this.r2BaseUrl}/Layout/${type}/${fileName}`,
