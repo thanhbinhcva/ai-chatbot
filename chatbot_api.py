@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Header
+from fastapi import FastAPI, HTTPException, Header, Query
 from pydantic import BaseModel
 import uvicorn
 import json
@@ -12,6 +12,9 @@ from main import (
 from database import save_to_mongo
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.chains import LLMChain
+from datetime import datetime
+
+from database import get_brand_profile_by_session
 
 app = FastAPI(title="AI Brand Assistant API")
 
@@ -125,6 +128,23 @@ def create_brief(x_session_id: Optional[str] = Header(None)):
         )
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+    
+# --- HEALTH CHECK API ---
+@app.get("/health")
+def health_check(sessionId: Optional[str] = Query(None)):
+    """
+    API: /health
+    - Kiểm tra tình trạng API.
+    - Có thể nhận sessionId qua query params (?sessionId=...).
+    """
+    brand_profile = get_brand_profile_by_session(sessionId)
+    return {
+        "success": True,
+        "message": "API is running",
+        "timestamp": datetime.utcnow().isoformat(),
+        "sessionId": sessionId or None,
+        "brand_profile": brand_profile
+    }
 
 
 # --- CORE FINALIZE LOGIC ---

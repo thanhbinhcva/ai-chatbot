@@ -21,3 +21,20 @@ def save_to_mongo(data: dict):
     except Exception as e:
         print(f"❌ Lỗi khi lưu MongoDB: {e}")
         return None
+def get_brand_profile_by_session(session_id: str):
+    """
+    🔍 Lấy thông tin brand_profile từ MongoDB theo session_id.
+    """
+    try:
+        result = collection.find_one({"session_id": session_id})
+        if not result:
+            print(f"⚠️ Không tìm thấy hồ sơ với session_id: {session_id}")
+            return None
+
+        # Convert ObjectId sang string
+        result["_id"] = str(result["_id"])
+        return result
+
+    except Exception as e:
+        print(f"❌ Lỗi khi lấy brand_profile theo session_id: {e}")
+        return None

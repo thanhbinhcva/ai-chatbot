@@ -3,6 +3,8 @@ Full Workflow Demo - Test toàn bộ quy trình từ chatbot output đến expor
 """
 import json
 from api_connector import APIConnector, load_brand_profile
+from database import get_brand_profile_by_session
+
 
 
 def print_section(title: str):
@@ -29,59 +31,63 @@ def display_options(items: list, item_type: str = "item"):
     if len(items) > 5:
         print(f"  ... and {len(items) - 5} more {item_type}s")
 
-
 def main():
     """Main workflow demo"""
     print_section("🚀 FULL WORKFLOW DEMO - CHATBOT TO EXPORT")
-    
+
     # ========================================================================
-    # STEP 1: Load Brand Profile
+    # STEP 1 + 2.5: Fetch Brand Profile & API Health via /health
     # ========================================================================
-    print_section("STEP 1: Load Brand Profile from Chatbot")
-    
-    brand_profile = load_brand_profile("brand_profile.json")
-    
-    if not brand_profile:
-        print("❌ Cannot load brand profile!")
-        return
-    
-    print("✅ Brand profile loaded successfully!")
-    print(f"📝 Brand Name: {brand_profile.get('brand_name_full')}")
-    print(f"📍 Location: {brand_profile.get('location')}")
-    print(f"🎨 Logo Style: {', '.join(brand_profile.get('logo_style', []))}")
-    print(f"🎯 Main Products: {', '.join(brand_profile.get('main_products', []))}")
-    
-    # ========================================================================
-    # STEP 2: Initialize API Connection
-    # ========================================================================
-    print_section("STEP 2: Connect to API_find-img")
-    
-    # Đảm bảo API đang chạy trước
+    print_section("STEP 1: Fetch Brand Profile from FastAPI /health")
+
+    import requests
+    connector_chat = APIConnector(api_base_url="http://localhost:8000")  # FastAPI port
     connector = APIConnector(api_base_url="http://localhost:3000")
-    
-    # Test connection
+
+    session_id = "12fe98f9"
+    print(f"🧩 Using sessionId: {session_id}")
+
     try:
-        import requests
-        health_check = requests.get(f"{connector.api_base_url}/health", timeout=5)
-        if health_check.status_code == 200:
-            print("✅ API connection successful!")
+        health_url = f"{connector_chat.api_base_url}/health"
+        params = {"sessionId": session_id}
+        response = requests.get(health_url, params=params, timeout=5)
+
+        if response.status_code == 200:
+            data = response.json()
+            print("✅ API health check successful!")
+            print(f"🧠 Message: {data.get('message')}")
+            print(f"🧩 SessionId confirmed: {data.get('sessionId')}")
+
+            brand_profile = data.get("brand_profile")
+            if not brand_profile:
+                print("❌ No brand_profile found in response!")
+                return
+
+            print("✅ Brand profile loaded successfully from API!")
+            print(f"📝 Brand Name: {brand_profile.get('brand_name_full')}")
+            print(f"📍 Location: {brand_profile.get('location')}")
+            print(f"🎨 Logo Style: {', '.join(brand_profile.get('logo_style', []))}")
+            print(f"🎯 Main Products: {', '.join(brand_profile.get('main_products', []))}")
+
         else:
-            print("⚠️  API is running but returned unexpected status")
+            print(f"⚠️ API health check failed: {response.status_code}")
+            print("Response:", response.text)
+            return
+
     except Exception as e:
-        print(f"❌ Cannot connect to API. Make sure API_find-img is running!")
-        print(f"   Error: {e}")
-        print("\n💡 To start API_find-img:")
-        print("   cd ../API_find-img")
-        print("   npm install")
-        print("   npm start")
+        print(f"❌ Cannot connect to /health API: {e}")
         return
-    
+
     # ========================================================================
     # STEP 3: Initialize Workflow & Get Logos
     # ========================================================================
     print_section("STEP 3: Initialize Workflow & Get Logos")
-    
-    result = connector.initialize_workflow(brand_profile)
+
+    # Gửi sessionId đi cùng với brand_profile
+    result = connector.initialize_workflow({
+        **brand_profile,
+        "sessionId": session_id
+    })
     
     if not result.get('success'):
         print(f"❌ Failed to initialize: {result.get('message')}")
@@ -94,6 +100,8 @@ def main():
     # Lưu kết quả
     with open("workflow_results.json", "w", encoding="utf-8") as f:
         json.dump({"step": "logos", "data": result}, f, ensure_ascii=False, indent=2)
+    
+    print("✅ Workflow initialized successfully!")
     
     # ========================================================================
     # STEP 4: Select Logo (Auto select first logo for demo)
