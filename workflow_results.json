@@ -1,0 +1,95 @@
+{
+  "step": "logos",
+  "data": {
+    "success": true,
+    "message": "Session created successfully",
+    "data": {
+      "sessionId": "eabf5c99",
+      "currentStep": "logo",
+      "category": "Door",
+      "logos": [
+        {
+          "id": "Door-1",
+          "name": "Door_1",
+          "url": "https://pub-899d2a26777749e09d0cc4628befdc61.r2.dev/Door/Door_1/door_1_original.svg",
+          "category": "Door",
+          "variant": 1,
+          "color": "original"
+        },
+        {
+          "id": "Door-2",
+          "name": "Door_2",
+          "url": "https://pub-899d2a26777749e09d0cc4628befdc61.r2.dev/Door/Door_2/door_2_original.svg",
+          "category": "Door",
+          "variant": 2,
+          "color": "original"
+        },
+        {
+          "id": "Door-3",
+          "name": "Door_3",
+          "url": "https://pub-899d2a26777749e09d0cc4628befdc61.r2.dev/Door/Door_3/door_3_original.svg",
+          "category": "Door",
+          "variant": 3,
+          "color": "original"
+        },
+        {
+          "id": "Door-4",
+          "name": "Door_4",
+          "url": "https://pub-899d2a26777749e09d0cc4628befdc61.r2.dev/Door/Door_4/door_4_original.svg",
+          "category": "Door",
+          "variant": 4,
+          "color": "original"
+        },
+        {
+          "id": "Door-5",
+          "name": "Door_5",
+          "url": "https://pub-899d2a26777749e09d0cc4628befdc61.r2.dev/Door/Door_5/door_5_original.svg",
+          "category": "Door",
+          "variant": 5,
+          "color": "original"
+        },
+        {
+          "id": "Door-6",
+          "name": "Door_6",
+          "url": "https://pub-899d2a26777749e09d0cc4628befdc61.r2.dev/Door/Door_6/door_6_original.svg",
+          "category": "Door",
+          "variant": 6,
+          "color": "original"
+        },
+        {
+          "id": "Door-7",
+          "name": "Door_7",
+          "url": "https://pub-899d2a26777749e09d0cc4628befdc61.r2.dev/Door/Door_7/door_7_original.svg",
+          "category": "Door",
+          "variant": 7,
+          "color": "original"
+        },
+        {
+          "id": "Door-8",
+          "name": "Door_8",
+          "url": "https://pub-899d2a26777749e09d0cc4628befdc61.r2.dev/Door/Door_8/door_8_original.svg",
+          "category": "Door",
+          "variant": 8,
+          "color": "original"
+        },
+        {
+          "id": "Door-9",
+          "name": "Door_9",
+          "url": "https://pub-899d2a26777749e09d0cc4628befdc61.r2.dev/Door/Door_9/door_9_original.svg",
+          "category": "Door",
+          "variant": 9,
+          "color": "original"
+        },
+        {
+          "id": "Door-10",
+          "name": "Door_10",
+          "url": "https://pub-899d2a26777749e09d0cc4628befdc61.r2.dev/Door/Door_10/door_10_original.svg",
+          "category": "Door",
+          "variant": 10,
+          "color": "original"
+        }
+      ],
+      "totalLogos": 10
+    }
+  }
+}

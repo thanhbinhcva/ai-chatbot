@@ -1,0 +1,81 @@
+{
+  "briefId": "c51c1573-26ac-4067-a7ff-41e99ed24fa6",
+  "sessionId": "eabf5c99",
+  "chatbotOutput": {
+    "brand_name": "Nhôm kính An Phát",
+    "slogan": "An Phát: Chất lượng Vàng, Uy tín Bền vững",
+    "phone": "0986899001",
+    "location": "212 Quang Trung, Hà Đông, Hà Nội",
+    "core_values": [
+      "Uy tín",
+      "Chất lượng",
+      "Tận tâm"
+    ],
+    "main_products": [
+      "Cửa nhôm",
+      "Cửa kính",
+      "Vách ngăn",
+      "Cửa cuốn"
+    ]
+  },
+  "chosenLogoUrl": "https://pub-899d2a26777749e09d0cc4628befdc61.r2.dev/Door/Door_1/door_1_original.svg",
+  "chosenColor": "blue",
+  "chosenLayout": {
+    "id": "avatar-1",
+    "type": "Avatar",
+    "name": "Avatar 1",
+    "url": "https://pub-899d2a26777749e09d0cc4628befdc61.r2.dev/Layout/Avatar/avatar_1.svg",
+    "thumbnail": "https://pub-899d2a26777749e09d0cc4628befdc61.r2.dev/Layout/Avatar/avatar_1_thumb.jpg"
+  },
+  "chosenBackground": {
+    "id": "color-1",
+    "type": "color",
+    "value": "#FFFFFF"
+  },
+  "customization": {
+    "brandName": "Nhôm kính An Phát",
+    "slogan": "An Phát: Chất lượng Vàng, Uy tín Bền vững",
+    "phoneNumber": "0986899001",
+    "location": "212 Quang Trung, Hà Đông, Hà Nội",
+    "textColor": "#000000",
+    "textFont": "Roboto Bold"
+  },
+  "assetsToExport": [
+    {
+      "layoutId": "avatar-1",
+      "outputFileName": "avatar_avatar_1.pdf",
+      "format": "pdf",
+      "customizations": {
+        "layoutLink": "https://pub-899d2a26777749e09d0cc4628befdc61.r2.dev/Layout/Avatar/avatar_1.svg",
+        "brand_name": {
+          "text": "Nhôm kính An Phát",
+          "font": "Roboto Bold",
+          "color": "#000000"
+        },
+        "slogan": {
+          "text": "An Phát: Chất lượng Vàng, Uy tín Bền vững",
+          "font": "Roboto Bold",
+          "color": "#000000"
+        },
+        "phone_number": {
+          "text": "0986899001",
+          "font": "Roboto Bold",
+          "color": "#000000"
+        },
+        "location": {
+          "text": "212 Quang Trung, Hà Đông, Hà Nội",
+          "font": "Roboto Bold",
+          "color": "#000000"
+        },
+        "color": "https://pub-899d2a26777749e09d0cc4628befdc61.r2.dev/Door/Door_1/door_1_blue.svg",
+        "background": {
+          "type": "color",
+          "value": "#FFFFFF"
+        },
+        "logo": "https://pub-899d2a26777749e09d0cc4628befdc61.r2.dev/Door/Door_1/door_1_original.svg"
+      }
+    }
+  ],
+  "createdAt": "2025-10-13T00:55:49.933Z",
+  "completedAt": "2025-10-13T00:55:49.940Z"
+}

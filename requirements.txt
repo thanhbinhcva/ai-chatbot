@@ -21,3 +21,4 @@ uvicorn
 # Utilities 
 pydantic
 pymongo
+requests
