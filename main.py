@@ -8,6 +8,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import LLMChain
 from logo_generator import generate_logo_with_ai
+from database import save_prompt_to_db, get_latest_prompt
 # 1. Load API key
 load_dotenv()
 google_api_key = os.getenv("GEMINI_API_KEY")
@@ -23,7 +24,7 @@ llm = ChatGoogleGenerativeAI(
 memory = ConversationBufferMemory(memory_key="history", input_key="user_input")
 
 # 4. Prompt tổng hợp (gom hết các stages)
-main_prompt = ChatPromptTemplate.from_template("""
+default_prompt_text = """
 Bạn là một trợ lý AI thân thiện, chuyên giúp các chủ xưởng nhôm kính nhỏ ở Việt Nam xây dựng thương hiệu.
 
 Nhiệm vụ:
@@ -79,9 +80,18 @@ Kết thúc bằng câu hỏi xác nhận:
 {history}
 Người dùng: {user_input}
 Bot:
-""")
+"""
 
-# 5. Chain 
+prompt_from_db = get_latest_prompt()
+if not prompt_from_db:
+    print("⚠️ Không tìm thấy prompt trong DB — sử dụng prompt mặc định.")
+    save_prompt_to_db(default_prompt_text)
+    prompt_from_db = default_prompt_text
+else:
+    print("✅ Đã tải prompt động từ MongoDB.")
+
+# 5. Tạo Prompt & Chain
+main_prompt = ChatPromptTemplate.from_template(prompt_from_db)
 main_chain = LLMChain(llm=llm, prompt=main_prompt, memory=memory, verbose=False)
 
 # 6. Hàm trích xuất JSON
