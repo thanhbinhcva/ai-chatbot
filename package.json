@@ -1,0 +1,25 @@
+{
+  "name": "asset-service",
+  "version": "1.0.0",
+  "description": "Asset Service - RESTful API for Logo Management",
+  "main": "asset_service.js",
+  "scripts": {
+    "start": "node asset_service.js",
+    "dev": "nodemon asset_service.js"
+  },
+  "keywords": [
+    "express",
+    "api",
+    "rest",
+    "logo",
+    "asset"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

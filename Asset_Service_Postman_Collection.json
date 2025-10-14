@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "asset-service-2025",
+		"name": "Asset Service - 6 APIs",
+		"description": "Collection đơn giản với 6 APIs chính",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/health",
+					"host": ["{{base_url}}"],
+					"path": ["health"]
+				}
+			}
+		},
+		{
+			"name": "2. Get Emblems",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/logo/emblem/search",
+					"host": ["{{base_url}}"],
+					"path": ["api", "v1", "logo", "emblem", "search"]
+				}
+			}
+		},
+		{
+			"name": "3. Get Emblem Variants",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/logo/emblem/variant/search?emblemId=E001",
+					"host": ["{{base_url}}"],
+					"path": ["api", "v1", "logo", "emblem", "variant", "search"],
+					"query": [
+						{
+							"key": "emblemId",
+							"value": "E001"
+						}
+					]
+				}
+			}
+		},
+		{
+			"name": "4. Get Layout Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/logo/layout/category",
+					"host": ["{{base_url}}"],
+					"path": ["api", "v1", "logo", "layout", "category"]
+				}
+			}
+		},
+		{
+			"name": "5. Get Layouts by Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/logo/layout/search?categoryID=C101",
+					"host": ["{{base_url}}"],
+					"path": ["api", "v1", "logo", "layout", "search"],
+					"query": [
+						{
+							"key": "categoryID",
+							"value": "C101"
+						}
+					]
+				}
+			}
+		},
+		{
+			"name": "6. Get Backgrounds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/logo/background/search",
+					"host": ["{{base_url}}"],
+					"path": ["api", "v1", "logo", "background", "search"]
+				}
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
